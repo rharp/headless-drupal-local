@@ -25,6 +25,7 @@ services:
       - "./config:/var/www/config"
       - "./vendor:/var/www/vendor"
       - "./test:/var/www/test"
+      - "./content:/var/www/content"
 
   web:
     build:

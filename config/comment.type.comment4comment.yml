@@ -1,0 +1,8 @@
+uuid: e846b1ac-6a70-412c-a96b-69ec8eafa082
+langcode: en
+status: true
+dependencies: {  }
+id: comment4comment
+label: comment4comment
+target_entity_type_id: comment
+description: ''

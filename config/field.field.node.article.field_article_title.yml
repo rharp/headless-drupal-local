@@ -1,0 +1,21 @@
+uuid: f9d1b45a-0b47-4144-9f86-9452c717783f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_title
+    - node.type.article
+  module:
+    - text
+id: node.article.field_article_title
+field_name: field_article_title
+entity_type: node
+bundle: article
+label: 'Article Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
