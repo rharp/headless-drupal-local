@@ -36,7 +36,7 @@ include ${INCLUDE_MAKEFILES}
 # Core commands
 # The following commands are the basis of the development infrastructure.
 ##
-init: composer-install docker-rebuild wait-healthy init-drupal import-db docker-status # Build environment
+init: composer-install docker-rebuild wait-healthy init-drupal import-init docker-status # Build environment
 
 safe-update: docker-stop composer-install docker-rebuild wait-healthy clear-cache # Update without importing config
 
@@ -151,6 +151,9 @@ export-prod: # Export production tarball
 
 import-db: # Import a db
 	cat $(filter-out $@,$(MAKECMDGOALS)) | bin/drush sqlc
+
+import-init: #Import Database on init
+	cat ./databaseBackup/govcon-2018-drupal.sql | bin/drush sqlc
 
 export-db: # Export a db tp ./backupDatabase
 	bin/drush sql-dump > ./databaseBackup/${PROJECT}.sql
