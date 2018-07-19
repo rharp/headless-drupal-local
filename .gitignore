@@ -5,6 +5,7 @@ webroot/libraries
 webroot/modules/contrib
 webroot/themes/contrib
 webroot/profiles/contrib
+webroot/sites/default/files/php
 
 # Ignore Drupal's file directory
 webroot/sites/*/files
