@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
-    - field.field.node.article.field_article_title
+    - field.field.node.article.field_comment
     - field.field.node.article.field_date
     - field.field.node.article.field_image
     - node.type.article
@@ -13,7 +13,6 @@ dependencies:
     - field_layout
     - image
     - layout_discovery
-    - text
     - user
 third_party_settings:
   field_layout:
@@ -24,13 +23,6 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  field_article_title:
-    type: text_default
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_image:
     type: image
     weight: 1
@@ -42,5 +34,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_comment: true
   field_date: true
   links: true

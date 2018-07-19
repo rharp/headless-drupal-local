@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
-    - field.field.node.article.field_article_title
     - field.field.node.article.field_comment
     - field.field.node.article.field_date
     - field.field.node.article.field_image
@@ -32,13 +32,6 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_article_title:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
   field_comment:
     weight: 4
