@@ -36,7 +36,7 @@ include ${INCLUDE_MAKEFILES}
 # Core commands
 # The following commands are the basis of the development infrastructure.
 ##
-init: composer-install docker-rebuild wait-healthy import-init fix-permissions clear-cache docker-status # Build environment
+init: composer-install docker-rebuild wait-healthy import-init config-import fix-permissions clear-cache docker-status # Build environment
 
 safe-update: docker-stop composer-install docker-rebuild wait-healthy clear-cache # Update without importing config
 
